@@ -22,7 +22,7 @@ public class Activity01 extends ActivityBasic {
 		Bundle bundle=getIntent().getExtras();
 		Log.v("Activity01", "userName="+bundle.getString("userName"));
 		
-       	intent=new Intent(this,MyActivity.class);
+       	intent=new Intent(this,Activity00.class);
        	//intent=new Intent(MyActivity.this,this.getClass());
        Button btn1	=(Button)findViewById(R.id.button11);
         

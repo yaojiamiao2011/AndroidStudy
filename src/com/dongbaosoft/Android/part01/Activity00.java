@@ -1,9 +1,9 @@
 package com.dongbaosoft.Android.part01;
 
+import com.dongbaosoft.Android.comm.ActivityBasic;
 import com.dongbaosoft.Android.comm.BtnClick;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 @SuppressLint("ShowToast")
-public class MyActivity extends Activity implements OnClickListener {
+public class Activity00 extends ActivityBasic implements OnClickListener {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -30,7 +30,7 @@ public class MyActivity extends Activity implements OnClickListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.activity_activity00);
 
 		System.out.println("println out..");
 		Log.w("MyActivity", "Log.w");
@@ -43,7 +43,7 @@ public class MyActivity extends Activity implements OnClickListener {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Toast.makeText(MyActivity.this, "onClick btn01!!",
+				Toast.makeText(Activity00.this, "onClick btn01!!",
 						Toast.LENGTH_LONG).show();
 			}
 
@@ -56,15 +56,15 @@ public class MyActivity extends Activity implements OnClickListener {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Toast.makeText(MyActivity.this, "onClick btn1!!",
+				Toast.makeText(Activity00.this, "onClick btn1!!",
 						Toast.LENGTH_LONG).show();
-				Intent intent = new Intent(MyActivity.this, Activity01.class);
+				Intent intent = new Intent(Activity00.this, Activity01.class);
 				Bundle bundle = new Bundle();
 				bundle.putString("userName", "yao");
 				bundle.putInt("runCount", 0);
 				intent.putExtras(bundle);
 
-				MyActivity.this.startActivityForResult(intent, 1);
+				Activity00.this.startActivityForResult(intent, 1);
 				// startActivity(intent);
 			}
 
@@ -79,7 +79,7 @@ public class MyActivity extends Activity implements OnClickListener {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Toast.makeText(MyActivity.this, "onClick btn3!!",
+				Toast.makeText(Activity00.this, "onClick btn3!!",
 						Toast.LENGTH_LONG).show();
 			}
 
@@ -102,7 +102,7 @@ public class MyActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
-		Toast.makeText(MyActivity.this, "onClick btn2!!", Toast.LENGTH_LONG)
+		Toast.makeText(Activity00.this, "onClick btn2!!", Toast.LENGTH_LONG)
 				.show();
 	}
 }

@@ -12,5 +12,8 @@
     <string name="title_activity_activity01">Activity01</string>
     <string name="button1">New Activity</string>
     <string name="retrunmain">return</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_activity_pressbar">ActivityPressbar</string>
+    <string name="title_activity_activity03dialog">03dialog</string>
 
 </resources>

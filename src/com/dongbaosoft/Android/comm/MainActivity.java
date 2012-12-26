@@ -12,39 +12,51 @@ import com.dongbaosoft.Android.part01.Activity00;
 import com.dongbaosoft.Android.part01.R;
 import com.dongbaosoft.Android.part02.Activity02Pressbar;
 import com.dongbaosoft.Android.part02.Activity03dialogActivity;
+import com.dongbaosoft.Android.part03.Tabview_Listview;
 
 public class MainActivity extends Activity {
 
-	Button btn1,btn2,btn3;
+	Button btn1, btn2, btn3, btn4;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		btn1=(Button)findViewById(R.id.button1);
-		btn1.setOnClickListener(new OnClickListener(){
+
+		btn4 = (Button) findViewById(R.id.button4);
+		btn4.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				startActivity(new Intent(MainActivity.this,Activity00.class));
+				startActivity(new Intent(MainActivity.this,
+						Tabview_Listview.class));
 			}
 		});
-		btn3=(Button)findViewById(R.id.button3);
-		btn3.setOnClickListener(new OnClickListener(){
+
+		btn1 = (Button) findViewById(R.id.button1);
+		btn1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				startActivity(new Intent(MainActivity.this,Activity03dialogActivity.class));
+				startActivity(new Intent(MainActivity.this, Activity00.class));
 			}
 		});
-		
-		
-		btn2=(Button)findViewById(R.id.button2);
-		btn2.setOnClickListener(new OnClickListener(){
+		btn3 = (Button) findViewById(R.id.button3);
+		btn3.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this,
+						Activity03dialogActivity.class));
+			}
+		});
+
+		btn2 = (Button) findViewById(R.id.button2);
+		btn2.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				startActivity(new Intent(MainActivity.this,Activity02Pressbar.class));
+				startActivity(new Intent(MainActivity.this,
+						Activity02Pressbar.class));
 			}
-			
+
 		});
-		
+
 	}
 
 	@Override

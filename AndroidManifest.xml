@@ -20,7 +20,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="com.dongbaosoft.Android.part01.Activity01"
@@ -46,6 +46,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dongbaosoft.Android.comm.ActivityBasic" />
         </activity>
+        <activity
+            android:name="com.dongbaosoft.Android.part03.Tabview_Listview"
+            android:label="@string/title_activity_tabview__listview" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.TabActivity" />
+        </activity>
+        <service android:name="com.dongbaosoft.Android.part03.MyService"></service>
     </application>
 
     <uses-sdk android:minSdkVersion="7" />

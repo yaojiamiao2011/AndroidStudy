@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".Tabview_Listview" >
+
+    <ListView
+        android:id="@+id/lay01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ff0000" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/lay02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/stratServer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Server" />
+
+        <Button
+            android:id="@+id/bindServer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Bind Server" />
+
+        <Button
+            android:id="@+id/unbindServer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Unbind Server" />
+
+        <Button
+            android:id="@+id/endServer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Server" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserName:" />
+
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="inputname" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PassWord:" />
+
+        <EditText
+            android:id="@+id/edtPassWord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/isSaveInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SaveInfo" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK" />
+
+    </LinearLayout>
+
+</LinearLayout>

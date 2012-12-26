@@ -24,27 +24,21 @@ public class Activity03dialogActivity extends Activity {
 		setContentView(R.layout.activity_activity03dialog);
 		// Show the Up button in the action bar.
 
+		((Button)findViewById(R.id.button2)).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+			}
+		});
 		//btn1=(Button)findViewById(R.id.button1);
 		((Button)findViewById(R.id.button1)).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				dlg=new ProgressDialog(Activity03dialogActivity.this);
-				dlg.setTitle("my title");
-				dlg.setMessage("progress...");
-				dlg.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-				dlg.setCancelable(true);
-				dlg.setButton("cancle,click me", new DialogInterface.OnClickListener() {
-					
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						// TODO Auto-generated method stub
-						Toast.makeText(Activity03dialogActivity.this,"will cancle",Toast.LENGTH_SHORT );
-						Log.v("Activity03dialogActivity","will cancel.");
-					}
-				});
-				dlg.show();
+				p_CreateDlg();
 				
 				
 				//用线程来关闭；
@@ -66,6 +60,24 @@ public class Activity03dialogActivity extends Activity {
 					
 				}.start();
 				
+			}
+
+			public void p_CreateDlg() {
+				dlg=new ProgressDialog(Activity03dialogActivity.this);
+				dlg.setTitle("my title");
+				dlg.setMessage("progress...");
+				dlg.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+				dlg.setCancelable(true);
+				dlg.setButton("cancle,click me", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+						Toast.makeText(Activity03dialogActivity.this,"will cancle",Toast.LENGTH_SHORT );
+						Log.v("Activity03dialogActivity","will cancel.");
+					}
+				});
+				dlg.show();
 			}
 		});
 		

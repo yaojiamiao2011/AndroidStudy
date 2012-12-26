@@ -15,5 +15,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_activity_pressbar">ActivityPressbar</string>
     <string name="title_activity_activity03dialog">03dialog</string>
+    <string name="title_activity_tabview__listview">TabView and ListView</string>
 
 </resources>

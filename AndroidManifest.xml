@@ -54,6 +54,7 @@
                 android:value="android.app.TabActivity" />
         </activity>
         <service android:name="com.dongbaosoft.Android.part03.MyService"></service>
+        <activity android:name="com.dongbaosoft.Android.part03.CreateComponent"></activity>
     </application>
 
     <uses-sdk android:minSdkVersion="7" />

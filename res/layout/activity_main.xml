@@ -29,4 +29,10 @@
         android:layout_height="wrap_content"
         android:text="4.TabView ListView" />
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="5.Create Component" />
+
 </LinearLayout>

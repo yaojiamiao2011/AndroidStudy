@@ -12,16 +12,24 @@ import com.dongbaosoft.Android.part01.Activity00;
 import com.dongbaosoft.Android.part01.R;
 import com.dongbaosoft.Android.part02.Activity02Pressbar;
 import com.dongbaosoft.Android.part02.Activity03dialogActivity;
+import com.dongbaosoft.Android.part03.CreateComponent;
 import com.dongbaosoft.Android.part03.Tabview_Listview;
 
 public class MainActivity extends Activity {
 
-	Button btn1, btn2, btn3, btn4;
+	Button btn1, btn2, btn3, btn4, btn5;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		btn5=(Button)findViewById(R.id.button5);
+		btn5.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this,CreateComponent.class));
+			}
+		});
 
 		btn4 = (Button) findViewById(R.id.button4);
 		btn4.setOnClickListener(new OnClickListener() {

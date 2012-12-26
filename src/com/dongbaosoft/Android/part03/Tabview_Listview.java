@@ -117,6 +117,9 @@ public class Tabview_Listview extends TabActivity {
 			}
 		});
 
+		
+		//自动创建组件与事件；
+		
 	}
 
 }

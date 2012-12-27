@@ -55,6 +55,9 @@
         </activity>
         <service android:name="com.dongbaosoft.Android.part03.MyService"></service>
         <activity android:name="com.dongbaosoft.Android.part03.CreateComponent"></activity>
+        <activity android:name="com.dongbaosoft.Android.part03.BundleActivity"></activity>
+        <activity android:name="com.dongbaosoft.Android.comm.ActivityBasic01"></activity>
+        <service android:name="com.dongbaosoft.Android.part03.BundleService"></service>
     </application>
 
     <uses-sdk android:minSdkVersion="7" />

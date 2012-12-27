@@ -7,17 +7,19 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.dongbaosoft.Android.part01.Activity00;
 import com.dongbaosoft.Android.part01.R;
 import com.dongbaosoft.Android.part02.Activity02Pressbar;
 import com.dongbaosoft.Android.part02.Activity03dialogActivity;
+import com.dongbaosoft.Android.part03.BundleActivity;
 import com.dongbaosoft.Android.part03.CreateComponent;
 import com.dongbaosoft.Android.part03.Tabview_Listview;
 
 public class MainActivity extends Activity {
 
-	Button btn1, btn2, btn3, btn4, btn5;
+	Button btn1, btn2, btn3, btn4, btn5, btn6;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,22 @@ public class MainActivity extends Activity {
 			}
 
 		});
+		
+		LinearLayout mainlayout=(LinearLayout)findViewById(R.id.mainlayout);
+		btn6=new Button(this);
+		btn6.setText("6.bundle Service");
+		btn6.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(MainActivity.this,
+						BundleActivity.class));
+			}
+		});
+		mainlayout.addView(btn6);
+		
+		
 
 	}
 

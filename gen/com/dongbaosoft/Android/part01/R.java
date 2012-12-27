@@ -27,8 +27,8 @@ public final class R {
         public static final int button11=0x7f060015;
         public static final int button2=0x7f060017;
         public static final int button3=0x7f060018;
-        public static final int button4=0x7f060019;
-        public static final int button5=0x7f06001a;
+        public static final int button4=0x7f06001a;
+        public static final int button5=0x7f06001b;
         public static final int editText1=0x7f060001;
         public static final int edtPassWord=0x7f06000d;
         public static final int edtUserName=0x7f06000b;
@@ -37,7 +37,8 @@ public final class R {
         public static final int lay01=0x7f060004;
         public static final int lay02=0x7f060005;
         public static final int lay03=0x7f06000a;
-        public static final int menu_settings=0x7f06001b;
+        public static final int mainlayout=0x7f060019;
+        public static final int menu_settings=0x7f06001c;
         public static final int progressBar1=0x7f060016;
         public static final int stratServer=0x7f060006;
         public static final int textView1=0x7f060000;

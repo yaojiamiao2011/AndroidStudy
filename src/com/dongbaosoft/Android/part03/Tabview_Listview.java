@@ -77,7 +77,7 @@ public class Tabview_Listview extends TabActivity {
 
 		list.setAdapter(ad);
 
-		Button btnStart, btnBind, btnUnbind, btnStop;
+		Button btnStart, btnStop;
 		btnStart = (Button) findViewById(R.id.stratServer);
 		btnStart.setOnClickListener(new MyServiceClick(this));
 		btnStop = (Button) findViewById(R.id.endServer);
@@ -93,6 +93,7 @@ public class Tabview_Listview extends TabActivity {
 		isSaveInfo = (CheckBox) findViewById(R.id.isSaveInfo);
 		SharedPreferences sp = getSharedPreferences("User_Info", 0);
 		isSaveInfo.setChecked(sp.getBoolean("isSaveInfo", false));
+		
 		if (isSaveInfo.isChecked()) {
 			
 			edtUserName.setText(sp.getString("UserName", ""));
@@ -107,6 +108,7 @@ public class Tabview_Listview extends TabActivity {
 				SharedPreferences sp1 = Tabview_Listview.this
 						.getSharedPreferences("User_Info", 0);
 				SharedPreferences.Editor editor = sp1.edit();
+			    
 				editor.putString("UserName", Tabview_Listview.this.edtUserName
 						.getText().toString());
 				editor.putString("PassWord", Tabview_Listview.this.edtPassWord

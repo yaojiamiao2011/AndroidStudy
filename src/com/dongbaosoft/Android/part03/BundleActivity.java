@@ -38,27 +38,27 @@ public class BundleActivity extends ActivityBasic01 {
 	    final Intent intent=new Intent(BundleActivity.this,BundleService.class);
 
 
-	    Button btnStart = this.CreateButton("Strat Bundle");
+	    Button btnStart = createButton("Strat Bundle");
 		btnStart.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Log.v("BundleActivity", "Strat Bundle");
-				Toast.makeText(BundleActivity.this, "Æô¶¯·þÎñ¡£", Toast.LENGTH_LONG).show();
+				Toast.makeText(BundleActivity.this, "aaaa", Toast.LENGTH_LONG).show();
 				bindService(intent, _connection, Service.BIND_AUTO_CREATE);
 
 			}
 		});
 		
-		Button btnStop = this.CreateButton("Stop Bundle");
+		Button btnStop = createButton("Stop Bundle");
 		btnStop.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Log.v("BundleActivity", "Stop Bundle");
-				Toast.makeText(BundleActivity.this, "Í£Ö¹·þÎñ¡£", Toast.LENGTH_LONG).show();
+				Toast.makeText(BundleActivity.this, "Í£Ö¹ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_LONG).show();
 				unbindService(_connection);
 
 			}

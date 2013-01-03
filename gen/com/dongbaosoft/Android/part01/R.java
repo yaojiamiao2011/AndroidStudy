@@ -44,12 +44,16 @@ public final class R {
         public static final int layout3=0x7f060022;
         public static final int layout4=0x7f060023;
         public static final int mainlayout=0x7f06001d;
-        public static final int menu_settings=0x7f060024;
+        public static final int menu_settings=0x7f060028;
         public static final int passWord=0x7f060012;
         public static final int progressBar1=0x7f06001a;
         public static final int stratServer=0x7f060006;
+        public static final int tb_user=0x7f060024;
         public static final int textView1=0x7f060000;
         public static final int textView2=0x7f06000c;
+        public static final int txId=0x7f060025;
+        public static final int txPassWord=0x7f060027;
+        public static final int txUserName=0x7f060026;
         public static final int unbindServer=0x7f060008;
         public static final int userName=0x7f060011;
     }
@@ -63,6 +67,8 @@ public final class R {
         public static final int activity_activity03dialog=0x7f030006;
         public static final int activity_main=0x7f030007;
         public static final int activity_main_center=0x7f030008;
+        public static final int commlayout=0x7f030009;
+        public static final int table_user=0x7f03000a;
     }
     public static final class menu {
         public static final int activity_04login=0x7f050000;

@@ -1,26 +1,55 @@
 package com.dongbaosoft.Android.part04;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import android.app.Activity;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import com.dongbaosoft.Android.comm.ActivityBasic01;
+import com.dongbaosoft.Android.comm.ShowRecord;
 import com.dongbaosoft.Android.part01.Activity01;
+import com.dongbaosoft.Android.part01.R;
 
 public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
 
 	private final String dbname = "mydatabase";
-	Button btn1, btn2, btn3, btn4;
+	Button btn1, btn2, btn3, btn4, btn5;
 	SQLiteDatabase db = null;
+	ListView listview = null;
+	LinearLayout listlayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+
+		/*
+		 * final LinearLayout layout2 = new LinearLayout(this); listlayout =
+		 * layout2; layout2.setId(1002);
+		 * layout2.setOrientation(LinearLayout.VERTICAL);
+		 */// setContentView(layout2);
+			// listlayout=(LinearLayout)findViewById(R.layout.commlayout);
+
+		LayoutInflater inflater = (LayoutInflater) this
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		listlayout =  (LinearLayout) inflater.inflate(R.layout.commlayout, null);
 
 		btn1 = createButton("1,Create Database.");
 		btn1.setOnClickListener(this);
@@ -30,6 +59,11 @@ public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
 		btn3.setOnClickListener(this);
 		btn4 = createButton("4.Query Data(fix show).");
 		btn4.setOnClickListener(this);
+		btn5 = createButton("5.Query Data(¶¯Ì¬´´½¨)");
+		btn5.setOnClickListener(this);
+
+		listview = new ListView(this);
+		myLayOut.addView(listview);
 
 	}
 
@@ -46,6 +80,7 @@ public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
+		String[] from = { "id", "username", "password" };
 		// TODO Auto-generated method stub
 		if (db == null)
 			db = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
@@ -59,8 +94,9 @@ public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
 		} else if (v == btn3) {
 			int i;
 			for (i = 1; i < 100; i++) {
-				String sql1 =  String.format("insert into User values (%d,\"%s\",\"%s\")", i, "name" + i,
-						"pwd" + i);
+				String sql1 = String.format(
+						"insert into User values (%d,\"%s\",\"%s\")", i, "name"
+								+ i, "pwd" + i);
 				execsql(sql1);
 
 			}
@@ -78,12 +114,28 @@ public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
 					id = "" + rst.getInt(0);
 					userName = rst.getString(1);
 					password = rst.getString(2);
-					String log =String.format("id=%s;userName=%s;password=%s", id, userName,
-							password);
+					String log = String.format("id=%s;userName=%s;password=%s",
+							id, userName, password);
 					Log.v("Record:", log);
 				} while (rst.moveToNext());
 			}
 
+			ArrayList<HashMap<String, Object>> listData = new ArrayList<HashMap<String, Object>>();
+			listData = ShowRecord.p_getListData(rst, from);
+
+			SimpleAdapter apt = new SimpleAdapter(this, listData,
+					R.layout.table_user, from, new int[] { R.id.txId,
+							R.id.txUserName, R.id.txPassWord });
+			listview.setAdapter(apt);
+
+		} else if (v == btn5) {
+			String sql = "select * from User";
+			Cursor rst;
+			Log.v("Record:", "get data1.");
+			rst = db.rawQuery(sql, null);
+			Toast.makeText(this, "myLayOut id=" + myLayOut.getId(),
+					Toast.LENGTH_LONG).show();
+			ShowRecord.p_ShowData(this, listlayout, listview, rst, from);
 		}
 	}
 

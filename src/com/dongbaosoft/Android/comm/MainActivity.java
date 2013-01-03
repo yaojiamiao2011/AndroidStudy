@@ -8,16 +8,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
 import com.dongbaosoft.Android.comm.update.UpdateTool;
 import com.dongbaosoft.Android.part01.Activity00;
 import com.dongbaosoft.Android.part01.R;
 import com.dongbaosoft.Android.part02.Activity02Pressbar;
 import com.dongbaosoft.Android.part02.Activity03dialogActivity;
-import com.dongbaosoft.Android.part03.BundleActivity;
 import com.dongbaosoft.Android.part03.CreateComponent;
 import com.dongbaosoft.Android.part03.Tabview_Listview;
-import com.dongbaosoft.Android.part04.FileStore;
-import com.dongbaosoft.Android.part04.LoginActivity;
 
 public class MainActivity extends Activity {
 
@@ -27,6 +25,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.activity_main);
 		
 		btn5=(Button)findViewById(R.id.button5);
@@ -71,21 +70,10 @@ public class MainActivity extends Activity {
 		});
 		
 		LinearLayout mainlayout=(LinearLayout)findViewById(R.id.mainlayout);
-		btn6=new Button(this);
-		btn6.setText("6.bundle Service");
-		btn6.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(MainActivity.this,
-						BundleActivity.class));
-			}
-		});
-		mainlayout.addView(btn6);
+
 		
 		btn7=new Button(this);
-		btn7.setText("7,Update...");
+		btn7.setText("6,Update...");
 		mainlayout.addView(btn7);
 		btn7.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
@@ -97,31 +85,22 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		btn8=new Button(this);
-		btn8.setText("8,SharedPreferences");
-		mainlayout.addView(btn8);
-		btn8.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(MainActivity.this,
-						LoginActivity.class));
-			}
-		});
 		
 		btn9=new Button(this);
-		btn9.setText("9.File Store...");
+		btn9.setText("Main Menu.");
 		mainlayout.addView(btn9);
 		btn9.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(MainActivity.this,						FileStore.class));
+				startNewActivity(MainCenter.class);
 			}
 		});
 
+	}
+	
+	private void startNewActivity(Class cls){
+		startActivity(new Intent(this, cls));
 	}
 
 	@Override

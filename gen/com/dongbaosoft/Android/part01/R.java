@@ -39,8 +39,12 @@ public final class R {
         public static final int lay01=0x7f060004;
         public static final int lay02=0x7f060005;
         public static final int lay03=0x7f06000a;
+        public static final int layout1=0x7f060020;
+        public static final int layout2=0x7f060021;
+        public static final int layout3=0x7f060022;
+        public static final int layout4=0x7f060023;
         public static final int mainlayout=0x7f06001d;
-        public static final int menu_settings=0x7f060020;
+        public static final int menu_settings=0x7f060024;
         public static final int passWord=0x7f060012;
         public static final int progressBar1=0x7f06001a;
         public static final int stratServer=0x7f060006;
@@ -58,6 +62,7 @@ public final class R {
         public static final int activity_activity02pressbar=0x7f030005;
         public static final int activity_activity03dialog=0x7f030006;
         public static final int activity_main=0x7f030007;
+        public static final int activity_main_center=0x7f030008;
     }
     public static final class menu {
         public static final int activity_04login=0x7f050000;
@@ -66,6 +71,7 @@ public final class R {
         public static final int activity_activity03dialog=0x7f050003;
         public static final int activity_activity_pressbar=0x7f050004;
         public static final int activity_main=0x7f050005;
+        public static final int activity_main_center=0x7f050006;
     }
     public static final class string {
         public static final int app_name=0x7f040005;
@@ -83,6 +89,7 @@ public final class R {
         public static final int title_activity_activity_pressbar=0x7f04000c;
         public static final int title_activity_login=0x7f04000f;
         public static final int title_activity_main=0x7f04000b;
+        public static final int title_activity_main_center=0x7f040010;
         public static final int title_activity_tabview__listview=0x7f04000e;
     }
 }

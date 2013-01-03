@@ -17,5 +17,6 @@
     <string name="title_activity_activity03dialog">03dialog</string>
     <string name="title_activity_tabview__listview">TabView and ListView</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_main_center">MainCenter</string>
 
 </resources>

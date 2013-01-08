@@ -1,30 +1,21 @@
 package com.dongbaosoft.Android.part04;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import com.dongbaosoft.Android.comm.ActivityBasic01;
 import com.dongbaosoft.Android.comm.ShowRecord;
-import com.dongbaosoft.Android.part01.Activity01;
 import com.dongbaosoft.Android.part01.R;
 
 public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
@@ -49,7 +40,7 @@ public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
 
 		LayoutInflater inflater = (LayoutInflater) this
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		listlayout =  (LinearLayout) inflater.inflate(R.layout.commlayout, null);
+		listlayout = (LinearLayout) inflater.inflate(R.layout.commlayout, null);
 
 		btn1 = createButton("1,Create Database.");
 		btn1.setOnClickListener(this);
@@ -80,13 +71,13 @@ public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		String[] from = { "id", "username", "password" };
+		String[] from = { "_id", "userName", "password" };
 		// TODO Auto-generated method stub
 		if (db == null)
 			db = this.openOrCreateDatabase(dbname, MODE_PRIVATE, null);
 		if (v == btn1) {
 
-			String sql = "create table User(id int primary key,userName varchar(30),password varchar(100))";
+			String sql = "create table User(_id int primary key,userName varchar(30),password varchar(100))";
 			execsql(sql);
 
 		} else if (v == btn2) {
@@ -120,13 +111,16 @@ public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
 				} while (rst.moveToNext());
 			}
 
-			ArrayList<HashMap<String, Object>> listData = new ArrayList<HashMap<String, Object>>();
-			listData = ShowRecord.p_getListData(rst, from);
-
-			SimpleAdapter apt = new SimpleAdapter(this, listData,
-					R.layout.table_user, from, new int[] { R.id.txId,
+			SimpleCursorAdapter apt = new SimpleCursorAdapter(this,
+					R.layout.table_user, rst, from, new int[] { R.id.txId,
 							R.id.txUserName, R.id.txPassWord });
-			listview.setAdapter(apt);
+			/*
+			 * ArrayList<HashMap<String, Object>> listData = new
+			 * ArrayList<HashMap<String, Object>>(); listData =
+			 * ShowRecord.p_getListData(rst, from); SimpleAdapter apt = new
+			 * SimpleAdapter(this, listData, R.layout.table_user, from, new
+			 * int[] { R.id.txId, R.id.txUserName, R.id.txPassWord });
+			 */listview.setAdapter(apt);
 
 		} else if (v == btn5) {
 			String sql = "select * from User";

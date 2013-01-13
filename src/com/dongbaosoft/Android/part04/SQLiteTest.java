@@ -120,7 +120,8 @@ public class SQLiteTest extends ActivityBasic01 implements OnClickListener {
 			 * ShowRecord.p_getListData(rst, from); SimpleAdapter apt = new
 			 * SimpleAdapter(this, listData, R.layout.table_user, from, new
 			 * int[] { R.id.txId, R.id.txUserName, R.id.txPassWord });
-			 */listview.setAdapter(apt);
+			 */
+			listview.setAdapter(apt);
 
 		} else if (v == btn5) {
 			String sql = "select * from User";

@@ -69,7 +69,6 @@ public class ShowRecord {
 		//SimpleAdapter apt=new SimpleAdapter(con, listData,R.layout.commlayout, from, to);
 		SimpleAdapter apt=new SimpleAdapter(con, listData, layout.getId(), from, to);
 		listview.setAdapter(apt);
-		
 	}
 
 }

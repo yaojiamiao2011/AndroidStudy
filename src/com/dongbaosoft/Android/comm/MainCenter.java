@@ -13,6 +13,7 @@ import com.dongbaosoft.Android.part03.Tabview_Listview;
 import com.dongbaosoft.Android.part04.FileStore;
 import com.dongbaosoft.Android.part04.LoginActivity;
 import com.dongbaosoft.Android.part04.SQLiteTest;
+import com.dongbaosoft.Android.part05.Chat;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -68,6 +69,7 @@ public class MainCenter extends TabActivity implements OnClickListener,OnItemCli
 		listItem.add(addItem(2,"FileStore."));
 		listItem.add(addItem(3,"SharedPreferneces"));
 		listItem.add(addItem(4,"BundleActivity"));
+		listItem.add(addItem(51, "Chat"));
 		
 		String[] from = { "id", "itemText" };
 		int[] to = { android.R.id.text1, android.R.id.text2 };
@@ -139,6 +141,9 @@ public class MainCenter extends TabActivity implements OnClickListener,OnItemCli
 			break;
 		case 3:
 			startNewActivity(BundleActivity.class);
+			break;
+		case 4:
+			startNewActivity(Chat.class);
 			break;
 		default:
 			break;

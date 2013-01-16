@@ -86,6 +86,7 @@
             android:label="@string/title_activity_main_center" >
         </activity>
         <activity android:name="com.dongbaosoft.Android.part05.Chat"></activity>
+        <activity android:name="com.dongbaosoft.Android.part05.MyWeb"></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" >

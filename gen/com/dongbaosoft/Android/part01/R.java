@@ -11,51 +11,52 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int icon=0x7f020000;
-        public static final int star=0x7f020001;
+        public static final int ic_launcher=0x7f020000;
+        public static final int icon=0x7f020001;
+        public static final int star=0x7f020002;
     }
     public static final class id {
-        public static final int Button01=0x7f060015;
-        public static final int Button02=0x7f060016;
-        public static final int Button03=0x7f060017;
-        public static final int Button04=0x7f060018;
-        public static final int LinearLayout1=0x7f060003;
-        public static final int bindServer=0x7f060007;
-        public static final int btnCreateNewButton=0x7f060010;
-        public static final int btnOK=0x7f060014;
-        public static final int btnSave=0x7f06000f;
-        public static final int button1=0x7f060002;
-        public static final int button11=0x7f060019;
-        public static final int button2=0x7f06001b;
-        public static final int button3=0x7f06001c;
-        public static final int button4=0x7f06001e;
-        public static final int button5=0x7f06001f;
-        public static final int editText1=0x7f060001;
-        public static final int edtPassWord=0x7f06000d;
-        public static final int edtUserName=0x7f06000b;
-        public static final int endServer=0x7f060009;
-        public static final int isSaveInfo=0x7f06000e;
-        public static final int isSavePwd=0x7f060013;
-        public static final int lay01=0x7f060004;
-        public static final int lay02=0x7f060005;
-        public static final int lay03=0x7f06000a;
-        public static final int layout1=0x7f060020;
-        public static final int layout2=0x7f060021;
-        public static final int layout3=0x7f060022;
-        public static final int layout4=0x7f060023;
-        public static final int mainlayout=0x7f06001d;
-        public static final int menu_settings=0x7f060028;
-        public static final int passWord=0x7f060012;
-        public static final int progressBar1=0x7f06001a;
-        public static final int stratServer=0x7f060006;
-        public static final int tb_user=0x7f060024;
-        public static final int textView1=0x7f060000;
-        public static final int textView2=0x7f06000c;
-        public static final int txId=0x7f060025;
-        public static final int txPassWord=0x7f060027;
-        public static final int txUserName=0x7f060026;
-        public static final int unbindServer=0x7f060008;
-        public static final int userName=0x7f060011;
+        public static final int Button01=0x7f070015;
+        public static final int Button02=0x7f070016;
+        public static final int Button03=0x7f070017;
+        public static final int Button04=0x7f070018;
+        public static final int LinearLayout1=0x7f070003;
+        public static final int bindServer=0x7f070007;
+        public static final int btnCreateNewButton=0x7f070010;
+        public static final int btnOK=0x7f070014;
+        public static final int btnSave=0x7f07000f;
+        public static final int button1=0x7f070002;
+        public static final int button11=0x7f070019;
+        public static final int button2=0x7f07001b;
+        public static final int button3=0x7f07001c;
+        public static final int button4=0x7f07001e;
+        public static final int button5=0x7f07001f;
+        public static final int editText1=0x7f070001;
+        public static final int edtPassWord=0x7f07000d;
+        public static final int edtUserName=0x7f07000b;
+        public static final int endServer=0x7f070009;
+        public static final int isSaveInfo=0x7f07000e;
+        public static final int isSavePwd=0x7f070013;
+        public static final int lay01=0x7f070004;
+        public static final int lay02=0x7f070005;
+        public static final int lay03=0x7f07000a;
+        public static final int layout1=0x7f070020;
+        public static final int layout2=0x7f070021;
+        public static final int layout3=0x7f070022;
+        public static final int layout4=0x7f070023;
+        public static final int mainlayout=0x7f07001d;
+        public static final int menu_settings=0x7f070028;
+        public static final int passWord=0x7f070012;
+        public static final int progressBar1=0x7f07001a;
+        public static final int stratServer=0x7f070006;
+        public static final int tb_user=0x7f070024;
+        public static final int textView1=0x7f070000;
+        public static final int textView2=0x7f07000c;
+        public static final int txId=0x7f070025;
+        public static final int txPassWord=0x7f070027;
+        public static final int txUserName=0x7f070026;
+        public static final int unbindServer=0x7f070008;
+        public static final int userName=0x7f070011;
     }
     public static final class layout {
         public static final int activity_03listrow=0x7f030000;
@@ -71,13 +72,13 @@ public final class R {
         public static final int table_user=0x7f03000a;
     }
     public static final class menu {
-        public static final int activity_04login=0x7f050000;
-        public static final int activity_04tabview__listview=0x7f050001;
-        public static final int activity_activity01=0x7f050002;
-        public static final int activity_activity03dialog=0x7f050003;
-        public static final int activity_activity_pressbar=0x7f050004;
-        public static final int activity_main=0x7f050005;
-        public static final int activity_main_center=0x7f050006;
+        public static final int activity_04login=0x7f060000;
+        public static final int activity_04tabview__listview=0x7f060001;
+        public static final int activity_activity01=0x7f060002;
+        public static final int activity_activity03dialog=0x7f060003;
+        public static final int activity_activity_pressbar=0x7f060004;
+        public static final int activity_main=0x7f060005;
+        public static final int activity_main_center=0x7f060006;
     }
     public static final class string {
         public static final int app_name=0x7f040005;
@@ -97,5 +98,22 @@ public final class R {
         public static final int title_activity_main=0x7f04000b;
         public static final int title_activity_main_center=0x7f040010;
         public static final int title_activity_tabview__listview=0x7f04000e;
+    }
+    public static final class style {
+        /** 
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+         */
+        public static final int AppBaseTheme=0x7f050000;
+        /**  Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
+         */
+        public static final int AppTheme=0x7f050001;
     }
 }

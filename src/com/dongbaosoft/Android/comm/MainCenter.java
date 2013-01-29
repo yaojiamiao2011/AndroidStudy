@@ -63,6 +63,8 @@ public class MainCenter extends TabActivity implements OnClickListener,OnItemCli
 
 		listview = new ListView(this);
 		layout1.addView(listview);
+		layout3.addView(new MainMenu(this).createMenuList3());
+
 
 		ArrayList<HashMap<String, Object>> listItem = new ArrayList<HashMap<String, Object>>();
 
@@ -81,15 +83,16 @@ public class MainCenter extends TabActivity implements OnClickListener,OnItemCli
 		listview.setOnItemClickListener(this);
 		
 		TabSpec tabSpec1 = tab.newTabSpec("tabview1");
-		tabSpec1.setIndicator("Ê×Ò³", getResources().getDrawable(R.drawable.star));
+		tabSpec1.setIndicator("ï¿½ï¿½Ò³", getResources().getDrawable(R.drawable.star));
 		tabSpec1.setContent(R.id.layout1);
 		tab.addTab(tabSpec1);
 
 		tab.addTab(tab
-				.newTabSpec("tabview1")
+				.newTabSpec("tabview2")
 				.setIndicator("Service",
 						getResources().getDrawable(R.drawable.icon))
-				.setContent(R.id.layout2));
+				.setContent(R.id.layout2)
+				);
 		tab.addTab(tab
 				.newTabSpec("tabview3")
 				.setIndicator("About",
@@ -102,7 +105,7 @@ public class MainCenter extends TabActivity implements OnClickListener,OnItemCli
 				.setContent(R.id.layout4));
 	}
 
-	private HashMap<String, Object> addItem(int id,String itemName)
+	public HashMap<String, Object> addItem(int id,String itemName)
 	{
 		HashMap<String, Object> map = new HashMap<String, Object>();
         map.put("id", id);
@@ -117,7 +120,7 @@ public class MainCenter extends TabActivity implements OnClickListener,OnItemCli
 		return true;
 	}
 
-	private void startNewActivity(Class cls) {
+	public void startNewActivity(Class cls) {
 		startActivity(new Intent(this, cls));
 	}
 
